@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #000000;
+  width: 100%;
+  background: #f6f7f8;
+}
+
+input,
+button,
+select,
+a {
+  outline: 0 !important;
+  appearance: none;
+  color: unset;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

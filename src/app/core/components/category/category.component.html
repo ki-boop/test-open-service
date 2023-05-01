@@ -1,0 +1,9 @@
+<div class="categories">
+  <span *ngFor="let category of categories">
+    <a
+      [class.active]="isActiveCategory(category)"
+      [routerLink]="['/catalog', category.id]"
+      >{{ category.name }}</a
+    >
+  </span>
+</div>

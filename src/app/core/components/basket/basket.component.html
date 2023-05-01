@@ -1,0 +1,19 @@
+<div class="basket">
+  <div><img src="/assets/logo.svg" /></div>
+  <div class="products" *ngIf="basket?.products?.length">
+    <div class="product" *ngFor="let product of basket?.products">
+      <img [src]="product.image" />
+      <div>{{ product.name }}</div>
+      <div>{{ product.price }} ₽</div>
+      <div>{{ product.count }} шт</div>
+      <app-button (clicked)="removeProduct(product.id)">
+        <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
+      </app-button>
+    </div>
+  </div>
+
+  <div *ngIf="!(basket?.products)!.length" class="empty-basket">
+    <p>Корзина пуста</p>
+  </div>
+  <p class="total-sum"><strong>Итого:</strong> {{ totalSum }} ₽</p>
+</div>

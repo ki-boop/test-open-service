@@ -1,0 +1,17 @@
+<div
+  class="search_block"
+  [class.open_search]="isOpen || fullMode"
+  (clickOutside)="clickOutSide()"
+>
+  <div class="search-btn" (click)="onSearchClick(); searchInput.focus()">
+    <img src="assets/search.svg" />
+  </div>
+  <input
+    #searchInput
+    [class.full]="fullMode"
+    type="text"
+    placeholder="Поиск"
+    [(ngModel)]="searchValue"
+    (keydown.enter)="search()"
+  />
+</div>

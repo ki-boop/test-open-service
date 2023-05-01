@@ -1,0 +1,16 @@
+<div class="filters-wrapper">
+  <div class="field">
+    <app-input
+      [formControl]="filter.controls.productName"
+      label="Поиск"
+      (ngModelChange)="search()"
+    ></app-input>
+  </div>
+  <div class="field">
+    <app-category-autocomplete
+      [options]="options"
+      [(ngModel)]="currentCategory"
+      (onSelect)="selectCategory($event)"
+    ></app-category-autocomplete>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="product-card">
+  <img [src]="product?.image" />
+  <p>{{ product?.name }}</p>
+  <app-button [label]="productPrice" (clicked)="addToCart()"
+    ><mat-icon aria-hidden="false" fontIcon="add_shopping_cart"></mat-icon
+  ></app-button>
+</div>

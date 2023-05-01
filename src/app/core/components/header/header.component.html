@@ -1,0 +1,18 @@
+<header>
+  <div class="location-wrapper">
+    <img src="/assets/location.svg" /><span>Москва</span>
+  </div>
+  <a routerLink="/">
+    <img src="/assets/logo.svg" />
+  </a>
+  <div class="right-nav">
+    <app-search-input></app-search-input>
+    <div class="cart" (click)="onBasketClick()">
+      <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+      <span class="sum" *ngIf="sumBasket">{{sumBasket}}&nbsp;₽</span>
+    </div>
+  </div>
+  <div class="baket-modal" *ngIf="isBasketActive">
+    <app-basket></app-basket>
+  </div>
+</header>

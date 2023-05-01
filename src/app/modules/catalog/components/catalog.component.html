@@ -1,0 +1,8 @@
+<div *ngIf="!isHasProducts">
+  <app-noting-found></app-noting-found>
+</div>
+<div class="catalog-wrapper" *ngIf="isHasProducts">
+  <div class="card" *ngFor="let product of products">
+    <app-product-card [product]="product"> </app-product-card>
+  </div>
+</div>

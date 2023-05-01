@@ -1,0 +1,24 @@
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Категория</mat-label>
+
+  <input
+    type="text"
+    placeholder="Выберите из списка"
+    matInput
+    [(ngModel)]="value"
+    (focus)="filter(value?.name || '')"
+    (ngModelChange)="filter($event)"
+    [matAutocomplete]="auto"
+  />
+  <mat-autocomplete
+    autoActiveFirstOption
+    #auto="matAutocomplete"
+    [displayWith]="valueLabel"
+    [disableRipple]="true"
+    (optionSelected)="handleSelect($event)"
+  >
+    <mat-option *ngFor="let option of filteredOptions" [value]="option">
+      {{ option.name }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
